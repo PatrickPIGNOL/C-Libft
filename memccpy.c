@@ -10,8 +10,10 @@
 
 void* memccpy(void* pDestination, void* pSource, int pChar, size_t pNumber)
 {
+	unsigned char* vDestination;
 	size_t vIndex;
 
+	vDestination = (unsigned char*) pDestination;
 	vIndex = 0;
 
 	if(pDestination != NULL)
@@ -21,7 +23,7 @@ void* memccpy(void* pDestination, void* pSource, int pChar, size_t pNumber)
 			unsigned char* vSource;
 			unsigned char vChar;
 			vSource = (unsigned char*) pSource;
-			vChar = pChar;
+			vChar = (unsigned char) pChar;
 			while(vIndex < pNumber)
 			{
 				memmove(&pDestination[vIndex], &pSource[vIndex], 1);
@@ -33,5 +35,5 @@ void* memccpy(void* pDestination, void* pSource, int pChar, size_t pNumber)
 			}
 		}
 	}
-	return
+	return (void*) vDestination[vIndex];
 }
