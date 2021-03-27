@@ -10,5 +10,9 @@
 
 # include <string.h>
 
+void* 	memccpy	(void* pDestination, void* pSource, int pChar, size_t pNumber);
+int 	memcmp	(const void* pPointer1, const void* pPointer2, size_t pNumber)
+void* 	memcpy	(void* pDestination, void* pSource, size_t pNumber);
+void* 	memmove	(void* pDestination, void* pSource, size_t pNumber);
 
 #endif /* LIBFT_H_ */

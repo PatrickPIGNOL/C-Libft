@@ -7,21 +7,21 @@
 
 #include "libft.h"
 
-void* memset(void* pPointer, int pConstant, size_t pNumber)
+void* memset(void* pPointer, int pCharacter, size_t pNumber)
 {
 	if(pPointer != NULL)
 	{
 		unsigned char* vPointer;
-		unsigned char vConstant;
+		unsigned char vCharacter;
 		size_t vIndex;
 
 		vPointer = (unsigned char*)pPointer;
-		vConstant = (unsigned char)pConstant;
+		vCharacter = (unsigned char)pCharacter;
 		vIndex = 0;
 
 		while(vIndex < pNumber)
 		{
-			vPointer[vIndex] = vConstant;
+			vPointer[vIndex] = vCharacter;
 			vIndex++;
 		}
 	}

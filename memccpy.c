@@ -26,7 +26,7 @@ void* memccpy(void* pDestination, void* pSource, int pChar, size_t pNumber)
 			vChar = (unsigned char) pChar;
 			while(vIndex < pNumber)
 			{
-				memmove(&pDestination[vIndex], &pSource[vIndex], 1);
+				memcpy(&pDestination[vIndex], &pSource[vIndex], 1);
 				if(vSource[vIndex] == pChar)
 				{
 					return &pDestination[vIndex + 1];
@@ -35,5 +35,5 @@ void* memccpy(void* pDestination, void* pSource, int pChar, size_t pNumber)
 			}
 		}
 	}
-	return (void*) vDestination[vIndex];
+	return (void*) &vDestination[vIndex];
 }
