@@ -5,4 +5,10 @@
  *      Author: patrick
  */
 
+#include "libft.h"
+
+int memcmp(const void* pPointer1, const void* pPointer2, size_t n)
+{
+
+}
 

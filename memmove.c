@@ -16,10 +16,12 @@ void* memmove(void* pDestination, void* pSource, size_t pNumber)
 		{
 			unsigned char* vDestination;
 			unsigned char* vSource;
+			unsigned char* vTemporary;
+
 			vDestination = (unsigned char*) pDestination;
 			vSource = (unsigned char*) pSource;
-			unsigned char* vTemporary;
 			vTemporary = (unsigned char*) malloc(pNumber * sizeof(unsigned char*));
+
 			if(vTemporary != NULL)
 			{
 				size_t vIndex;
