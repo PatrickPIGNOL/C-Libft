@@ -11,6 +11,8 @@ int memcmp(const void* pPointer1, const void* pPointer2, size_t pNumber)
 {
 	int vReturn;
 
+	vReturn = 0;
+
 	if(pPointer1 != NULL)
 	{
 		if(pPointer2 != NULL)
@@ -19,7 +21,6 @@ int memcmp(const void* pPointer1, const void* pPointer2, size_t pNumber)
 			unsigned char* vPointer2;
 			int vIndex;
 
-			vReturn = 0;
 			vPointer1 = (unsigned char*) pPointer1;
 			vPointer2 = (unsigned char*) pPointer2;
 			vIndex = 0;
