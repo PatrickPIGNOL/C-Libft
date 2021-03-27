@@ -18,24 +18,24 @@ void* memmove(void* pDestination, void* pSource, size_t pNumber)
 			unsigned char* vSource;
 			vDestination = (unsigned char*) pDestination;
 			vSource = (unsigned char*) pSource;
-			unsigned char* vTemporaire;
-			vTemporaire = (unsigned char*) malloc(pNumber * sizeof(unsigned char*));
-			if(vTemporaire != NULL)
+			unsigned char* vTemporary;
+			vTemporary = (unsigned char*) malloc(pNumber * sizeof(unsigned char*));
+			if(vTemporary != NULL)
 			{
 				size_t vIndex;
 				vIndex = 0;
 				while(vIndex < pNumber)
 				{
-					vTemporaire[vIndex] = vSource[vIndex];
+					vTemporary[vIndex] = vSource[vIndex];
 					vIndex++;
 				}
 				vIndex = 0;
 				while(vIndex < pNumber)
 				{
-					vDestination[vIndex] = vTemporaire[vIndex];
+					vDestination[vIndex] = vTemporary[vIndex];
 					vIndex++;
 				}
-				free(vTemporaire);
+				free(vTemporary);
 			}
 		}
 	}
