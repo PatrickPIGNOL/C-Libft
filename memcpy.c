@@ -5,4 +5,9 @@
  *      Author: patrick
  */
 
+#include "libft.h"
 
+void* memcpy(void* pDestination, void* pSource, size_t pNumber)
+{
+	return memmove(pDestination, pSource, pNumber);
+}
