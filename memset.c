@@ -15,11 +15,11 @@ void* memset(void* pPointer, int pConstant, size_t pNumber)
 		unsigned char vConstant;
 		vPointer = (unsigned char*)pPointer;
 		vConstant = (unsigned char)pConstant;
-		size_t vCounter = 0;
-		while(vCounter < pNumber)
+		size_t vIndex = 0;
+		while(vIndex < pNumber)
 		{
-			vPointer[vCounter] = vConstant;
-			vCounter++;
+			vPointer[vIndex] = vConstant;
+			vIndex++;
 		}
 	}
 	return pPointer;
