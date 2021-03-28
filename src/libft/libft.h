@@ -35,6 +35,7 @@ typedef enum
 
 bool ft_itob(int pBoolean);
 
+void 	ft_bzero	(void* pString, size_t pNumber)
 int 	ft_isdigit	(int pCharacter);
 int 	ft_isalpha	(int pCharacter);
 int 	ft_isascii	(int pCharacter);
