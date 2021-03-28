@@ -9,7 +9,7 @@
 
 void* ft_memset(void* pPointer, int pCharacter, size_t pNumber)
 {
-	if(pPointer != NULL)
+	if(NULL != pPointer)
 	{
 		unsigned char* vPointer;
 		unsigned char vCharacter;
