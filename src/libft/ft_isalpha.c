@@ -15,9 +15,9 @@ int ft_isalpha(int pCharacter)
 	vCharacter = (unsigned char)pCharacter;
 	if
 	(
-		(vCharacter > 'a' && vCharacter < 'z')
+		(vCharacter >= 'a' && vCharacter <= 'z')
 		||
-		(vCharacter > 'A' && vCharacter < 'Z')
+		(vCharacter >= 'A' && vCharacter <= 'Z')
 	)
 	{
 		return vReturn = true;

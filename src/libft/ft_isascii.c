@@ -16,7 +16,9 @@ int ft_isascii(int pCharacter)
 	vCharacter = (unsigned char)pCharacter;
 	if
 	(
-		(vCharacter >= '\0' && vCharacter <= '\x7F')
+		(vCharacter >= '\0')
+		&&
+		(vCharacter <= '\x7F')
 	)
 	{
 		return vReturn = true;
