@@ -26,7 +26,7 @@ void* ft_memccpy(void* pDestination, void* pSource, int pCharacter, size_t pNumb
 			vCharacter = (unsigned char) pCharacter;
 			while(vIndex < pNumber)
 			{
-				memcpy(&vDestination[vIndex], &vSource[vIndex], 1);
+				ft_memcpy(&vDestination[vIndex], &vSource[vIndex], 1);
 				if(vSource[vIndex] == vCharacter)
 				{
 					break;

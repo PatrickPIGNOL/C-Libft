@@ -12,13 +12,21 @@ int ft_atoi(const char* pString)
 {
 	int vResult;
 	size_t vIndex;
-	vResult = 0;
 	vIndex = 0;
-	if(!isdigit(pString[vIndex]))
+	if(!ft_isdigit(pString[vIndex]))
 	{
 		vResult = INT_MIN;
 	}
-	while(pString[vIndex] != '\0' && isdigit(pString[vIndex]))
+	else
+	{
+		vResult = 0;
+	}
+	while
+	(
+		(pString[vIndex] != '\0')
+		&&
+		ft_isdigit(pString[vIndex])
+	)
 	{
 		vResult *= 10;
 		vResult += (int) pString[vIndex] - '0';

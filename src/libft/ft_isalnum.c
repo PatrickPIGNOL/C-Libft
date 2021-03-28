@@ -11,7 +11,7 @@ int ft_isalnum(int pCharacter)
 {
 	bool vReturn;
 	vReturn = false;
-	if(isdigit(pCharacter) || isalpha(pCharacter))
+	if(ft_isdigit(pCharacter) || ft_isalpha(pCharacter))
 	{
 		vReturn = true;
 	}

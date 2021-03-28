@@ -10,6 +10,6 @@
 
 int main()
 {
-	int vInt = atoi("153421");
+	int vInt = ft_atoi("153421");
 	vInt++;
 }

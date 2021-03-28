@@ -9,5 +9,5 @@
 
 void* ft_memcpy(void* pDestination, void* pSource, size_t pNumber)
 {
-	return memmove(pDestination, pSource, pNumber);
+	return ft_memmove(pDestination, pSource, pNumber);
 }
