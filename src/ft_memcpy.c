@@ -1,5 +1,5 @@
 /*
- * memcpy.c
+ *  ft_memcpy.c
  *
  *  Created on: 27 mars 2021
  *      Author: patrick
@@ -9,5 +9,5 @@
 
 void* ft_memcpy(void* pDestination, void* pSource, size_t pNumber)
 {
-	return ft_memmove(pDestination, pSource, pNumber);
+	return (void*) ft_memmove(pDestination, pSource, pNumber);
 }

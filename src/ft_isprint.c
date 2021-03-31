@@ -1,5 +1,5 @@
 /*
- * isdigit.c
+ *  ft_isprint.c
  *
  *  Created on: 27 mars 2021
  *      Author: patrick
@@ -7,17 +7,15 @@
 
 #include "libft.h"
 
-int ft_isdigit(int pCharacter)
+int ft_isprint(int pCharacter)
 {
 	bool vReturn;
-	unsigned char vCharacter;
 	vReturn = false;
+	unsigned char vCharacter;
 	vCharacter = (unsigned char)pCharacter;
 	if
 	(
-		(vCharacter >= '0')
-		&&
-		(vCharacter <= '9')
+		(vCharacter >= ' ' && vCharacter <= '\x7F')
 	)
 	{
 		return vReturn = true;

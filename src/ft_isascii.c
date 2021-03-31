@@ -1,5 +1,5 @@
 /*
- * isalpha.c
+ * 	ft_isascii.c
  *
  *  Created on: 27 mars 2021
  *      Author: patrick
@@ -7,7 +7,7 @@
 
 #include "libft.h"
 
-int ft_isalpha(int pCharacter)
+int ft_isascii(int pCharacter)
 {
 	bool vReturn;
 	vReturn = false;
@@ -15,9 +15,9 @@ int ft_isalpha(int pCharacter)
 	vCharacter = (unsigned char)pCharacter;
 	if
 	(
-		(vCharacter >= 'a' && vCharacter <= 'z')
-		||
-		(vCharacter >= 'A' && vCharacter <= 'Z')
+		(vCharacter >= '\0')
+		&&
+		(vCharacter <= '\x7F')
 	)
 	{
 		return vReturn = true;
