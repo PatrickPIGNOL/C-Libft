@@ -11,15 +11,33 @@
 int ft_atoi(const char* pString)
 {
 	int vResult;
+	int vSign;
 	size_t vIndex;
 	vIndex = 0;
-	if(!ft_isdigit(pString[vIndex]))
+	vSign = 1;
+	if(ft_isdigit(pString[vIndex]))
 	{
-		vResult = INT_MIN;
+		vResult = 0;
 	}
 	else
 	{
-		vResult = 0;
+		if
+		(
+			(pString[vIndex] == '-')
+			||
+			(pString[vIndex] == '+')
+		)
+		{
+			if(pString[vIndex] == '-')
+			{
+				vSign = -1;
+			}
+			vIndex++;
+		}
+		else
+		{
+			vResult = INT_MIN;
+		}
 	}
 	while
 	(
@@ -31,5 +49,6 @@ int ft_atoi(const char* pString)
 		vResult *= 10;
 		vResult += (int) pString[vIndex] - '0';
 	}
+	vResult *= vSign;
 	return vResult;
 }
