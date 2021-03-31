@@ -11,7 +11,7 @@ int ft_tolower(int pCharacter)
 {
 	char vResult;
 	vResult = pCharacter;
-	if(ft_islower(pCharacter))
+	if(ft_isupper(pCharacter))
 	{
 		vResult = pCharacter - (int) 'A' + (int) 'a';
 	}
